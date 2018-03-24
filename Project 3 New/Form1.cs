@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Project_3_New
 {
@@ -15,6 +16,31 @@ namespace Project_3_New
         public Form1()
         {
             InitializeComponent();
+
+        }
+
+        private void LoginSubmitButton_Click(object sender, EventArgs e)
+        {
+            string UserName = "home";
+            string Password = "1234";
+            if (UserNameTextBox.Text == UserName)
+            {
+                if (PasswordTextBox.Text == Password)
+                {
+                    this.Close();
+                }
+            }
+            
+        }
+
+        private void UserNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

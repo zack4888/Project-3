@@ -122,10 +122,11 @@ namespace Project_3_New
 
         private void SearchSubmitButton_Click(object sender, EventArgs e)
         {
-            
-            foreach (var i in students)
+            try
             {
-                try
+
+
+                foreach (var i in students)
                 {
                     if (Convert.ToInt16(StudentSearchTextBox.Text) == i.IDNum)
                     {
@@ -133,9 +134,14 @@ namespace Project_3_New
                         bindingSource1.Add(i);
                         dataGridView1.DataSource = bindingSource1;
                     }
+
+
                 }
-                catch
-                {  }
+            }
+            catch
+            {
+                MessageBox.Show("An error has occured");
+                StudentSearchTextBox.Clear();
             }
 
         }

@@ -19,7 +19,7 @@ namespace Project_3_New
         public Form2()
         {
             InitializeComponent();
-            new Form1().ShowDialog();
+            new Form1().ShowDialog(); //added for logging in
             String FilePath = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + @"\Students.csv";
             FileStream FileName = new FileStream(FilePath, FileMode.Open, FileAccess.ReadWrite);
             StreamReader Reader = new StreamReader(FileName);
@@ -28,7 +28,7 @@ namespace Project_3_New
             Students Astudent;
             string[] Values;
 
-            while (!Reader.EndOfStream)
+            while (!Reader.EndOfStream)//Reads the file 
             {
                 Values = Reader.ReadLine().Split(',');
                 if (Convert.ToInt16(Values[3]) < 400)
@@ -53,7 +53,7 @@ namespace Project_3_New
             Reader.Close();
             FileName.Close();
             
-            foreach (var i in BindingSourceList)
+            foreach (var i in BindingSourceList)//adds the list to the binding source for the table 
             {
                 bindingSource1.Add(i);
             }
@@ -62,7 +62,7 @@ namespace Project_3_New
 
         }
 
-        private void NewResSubmit_Click(object sender, EventArgs e)
+        private void NewResSubmit_Click(object sender, EventArgs e)//when you hit submit button to add new resident
         {
             try
             {
@@ -70,19 +70,19 @@ namespace Project_3_New
                 List<Students> BindingSourceList = new List<Students>();
                 Worker Bstudent;
                 Students Astudent;
-                if (checkedListBox1.GetItemChecked(0))
+                if (checkedListBox1.GetItemChecked(0))//if you have scholarship student checked
                 {
                     Astudent = new Scholarship(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
                     Write(Astudent);
                     students.Add(Astudent);
                 }
-                if (checkedListBox1.GetItemChecked(1))
+                if (checkedListBox1.GetItemChecked(1))// if you have Student Athlete checked
                 {
                     Astudent = new Athlete(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
                     Write(Astudent);
                     students.Add(Astudent);
                 }
-                if (checkedListBox1.GetItemChecked(2))
+                if (checkedListBox1.GetItemChecked(2))// if you have Student Worker checked 
                 {
                     Bstudent = new Worker(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text), Convert.ToDouble(WorkingHoursTextBox.Text));
                     Write1(Bstudent);
@@ -90,7 +90,7 @@ namespace Project_3_New
                 }
                 Astudent = new Students(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
 
-                bindingSource1.Add(Astudent);
+                bindingSource1.Add(Astudent);// Adds to the binding source
 
                 dataGridView1.DataSource = bindingSource1;
             }
@@ -99,7 +99,7 @@ namespace Project_3_New
                 MessageBox.Show("An error has occured please check your Entry boxes and try again.");
             }
         }
-        private void Write(Students Astudent)
+        private void Write(Students Astudent)//Writes new residents to file
         {
             
             String FilePath = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + @"\Students.csv";
@@ -109,7 +109,7 @@ namespace Project_3_New
             Writer.Close();
             FileName.Close();
         }
-        private void Write1(Worker Astudent)
+        private void Write1(Worker Astudent)//if resident is a worker with their total number of hours added use this to write to file 
         {
 
             String FilePath = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + @"\Students.csv";
@@ -120,7 +120,7 @@ namespace Project_3_New
             FileName.Close();
         }
 
-        private void SearchSubmitButton_Click(object sender, EventArgs e)
+        private void SearchSubmitButton_Click(object sender, EventArgs e)//This runs when you hit the search submit button 
         {
             try
             {

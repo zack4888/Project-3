@@ -35,17 +35,6 @@
             this.SearchLabel = new System.Windows.Forms.Label();
             this.StudentSearchTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.FirstNameLabel = new System.Windows.Forms.Label();
-            this.FirstNameTextbox = new System.Windows.Forms.TextBox();
-            this.LastNameLabel = new System.Windows.Forms.Label();
-            this.LastNameTextBox = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.RoomNumberLabel = new System.Windows.Forms.Label();
-            this.RoomNumTextBox = new System.Windows.Forms.TextBox();
-            this.IDNumLabel = new System.Windows.Forms.Label();
-            this.IDNumTextBox = new System.Windows.Forms.TextBox();
-            this.NewResSubmit = new System.Windows.Forms.Button();
             this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,13 +94,26 @@
             this.paddingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeModeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.form2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.WorkingHoursTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewResSubmit = new System.Windows.Forms.Button();
+            this.IDNumTextBox = new System.Windows.Forms.TextBox();
+            this.IDNumLabel = new System.Windows.Forms.Label();
+            this.RoomNumTextBox = new System.Windows.Forms.TextBox();
+            this.RoomNumberLabel = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameLabel = new System.Windows.Forms.Label();
+            this.FirstNameTextbox = new System.Windows.Forms.TextBox();
+            this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SearchSubmitButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.form2BindingSource)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -129,6 +131,8 @@
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = global::Project_3_New.Properties.Resources.maxresdefault2;
+            this.tabPage1.Controls.Add(this.SearchSubmitButton);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.TitleLabel);
             this.tabPage1.Controls.Add(this.SearchLabel);
             this.tabPage1.Controls.Add(this.StudentSearchTextBox);
@@ -157,14 +161,14 @@
             this.SearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchLabel.Location = new System.Drawing.Point(14, 106);
             this.SearchLabel.Name = "SearchLabel";
-            this.SearchLabel.Size = new System.Drawing.Size(117, 20);
+            this.SearchLabel.Size = new System.Drawing.Size(157, 20);
             this.SearchLabel.TabIndex = 2;
-            this.SearchLabel.Text = "Name Search";
+            this.SearchLabel.Text = "ID Number Search";
             // 
             // StudentSearchTextBox
             // 
             this.StudentSearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentSearchTextBox.Location = new System.Drawing.Point(137, 103);
+            this.StudentSearchTextBox.Location = new System.Drawing.Point(177, 103);
             this.StudentSearchTextBox.Name = "StudentSearchTextBox";
             this.StudentSearchTextBox.Size = new System.Drawing.Size(155, 26);
             this.StudentSearchTextBox.TabIndex = 1;
@@ -237,126 +241,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 340);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackgroundImage = global::Project_3_New.Properties.Resources.maxresdefault2;
-            this.tabPage2.Controls.Add(this.WorkingHoursTextBox);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.NewResSubmit);
-            this.tabPage2.Controls.Add(this.IDNumTextBox);
-            this.tabPage2.Controls.Add(this.IDNumLabel);
-            this.tabPage2.Controls.Add(this.RoomNumTextBox);
-            this.tabPage2.Controls.Add(this.RoomNumberLabel);
-            this.tabPage2.Controls.Add(this.checkedListBox1);
-            this.tabPage2.Controls.Add(this.LastNameTextBox);
-            this.tabPage2.Controls.Add(this.LastNameLabel);
-            this.tabPage2.Controls.Add(this.FirstNameTextbox);
-            this.tabPage2.Controls.Add(this.FirstNameLabel);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(896, 503);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "New Resident";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // FirstNameLabel
-            // 
-            this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(69, 75);
-            this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(86, 20);
-            this.FirstNameLabel.TabIndex = 0;
-            this.FirstNameLabel.Text = "First Name";
-            // 
-            // FirstNameTextbox
-            // 
-            this.FirstNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTextbox.Location = new System.Drawing.Point(161, 69);
-            this.FirstNameTextbox.Name = "FirstNameTextbox";
-            this.FirstNameTextbox.Size = new System.Drawing.Size(127, 26);
-            this.FirstNameTextbox.TabIndex = 1;
-            // 
-            // LastNameLabel
-            // 
-            this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(69, 136);
-            this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(86, 20);
-            this.LastNameLabel.TabIndex = 2;
-            this.LastNameLabel.Text = "Last Name";
-            // 
-            // LastNameTextBox
-            // 
-            this.LastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameTextBox.Location = new System.Drawing.Point(161, 130);
-            this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(127, 26);
-            this.LastNameTextBox.TabIndex = 3;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Scholarship Recipient",
-            "Student Athlete",
-            "Student Worker"});
-            this.checkedListBox1.Location = new System.Drawing.Point(538, 88);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(188, 88);
-            this.checkedListBox1.TabIndex = 4;
-            // 
-            // RoomNumberLabel
-            // 
-            this.RoomNumberLabel.AutoSize = true;
-            this.RoomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoomNumberLabel.Location = new System.Drawing.Point(43, 195);
-            this.RoomNumberLabel.Name = "RoomNumberLabel";
-            this.RoomNumberLabel.Size = new System.Drawing.Size(112, 20);
-            this.RoomNumberLabel.TabIndex = 5;
-            this.RoomNumberLabel.Text = "Room Number";
-            // 
-            // RoomNumTextBox
-            // 
-            this.RoomNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoomNumTextBox.Location = new System.Drawing.Point(162, 194);
-            this.RoomNumTextBox.Name = "RoomNumTextBox";
-            this.RoomNumTextBox.Size = new System.Drawing.Size(126, 26);
-            this.RoomNumTextBox.TabIndex = 6;
-            // 
-            // IDNumLabel
-            // 
-            this.IDNumLabel.AutoSize = true;
-            this.IDNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDNumLabel.Location = new System.Drawing.Point(69, 252);
-            this.IDNumLabel.Name = "IDNumLabel";
-            this.IDNumLabel.Size = new System.Drawing.Size(86, 20);
-            this.IDNumLabel.TabIndex = 7;
-            this.IDNumLabel.Text = "ID Number";
-            // 
-            // IDNumTextBox
-            // 
-            this.IDNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDNumTextBox.Location = new System.Drawing.Point(162, 251);
-            this.IDNumTextBox.Name = "IDNumTextBox";
-            this.IDNumTextBox.Size = new System.Drawing.Size(126, 26);
-            this.IDNumTextBox.TabIndex = 8;
-            // 
-            // NewResSubmit
-            // 
-            this.NewResSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewResSubmit.Location = new System.Drawing.Point(362, 408);
-            this.NewResSubmit.Name = "NewResSubmit";
-            this.NewResSubmit.Size = new System.Drawing.Size(98, 43);
-            this.NewResSubmit.TabIndex = 9;
-            this.NewResSubmit.Text = "Submit";
-            this.NewResSubmit.UseVisualStyleBackColor = true;
-            this.NewResSubmit.Click += new System.EventHandler(this.NewResSubmit_Click);
             // 
             // First_Name
             // 
@@ -716,6 +600,37 @@
             // 
             this.form2BindingSource.DataSource = typeof(Project_3_New.Form2);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackgroundImage = global::Project_3_New.Properties.Resources.maxresdefault2;
+            this.tabPage2.Controls.Add(this.WorkingHoursTextBox);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.NewResSubmit);
+            this.tabPage2.Controls.Add(this.IDNumTextBox);
+            this.tabPage2.Controls.Add(this.IDNumLabel);
+            this.tabPage2.Controls.Add(this.RoomNumTextBox);
+            this.tabPage2.Controls.Add(this.RoomNumberLabel);
+            this.tabPage2.Controls.Add(this.checkedListBox1);
+            this.tabPage2.Controls.Add(this.LastNameTextBox);
+            this.tabPage2.Controls.Add(this.LastNameLabel);
+            this.tabPage2.Controls.Add(this.FirstNameTextbox);
+            this.tabPage2.Controls.Add(this.FirstNameLabel);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(896, 503);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "New Resident";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // WorkingHoursTextBox
+            // 
+            this.WorkingHoursTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkingHoursTextBox.Location = new System.Drawing.Point(162, 303);
+            this.WorkingHoursTextBox.Name = "WorkingHoursTextBox";
+            this.WorkingHoursTextBox.Size = new System.Drawing.Size(126, 26);
+            this.WorkingHoursTextBox.TabIndex = 11;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -726,13 +641,120 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Working Hours\r\n(If Applicable}\r\n";
             // 
-            // WorkingHoursTextBox
+            // NewResSubmit
             // 
-            this.WorkingHoursTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkingHoursTextBox.Location = new System.Drawing.Point(162, 303);
-            this.WorkingHoursTextBox.Name = "WorkingHoursTextBox";
-            this.WorkingHoursTextBox.Size = new System.Drawing.Size(126, 26);
-            this.WorkingHoursTextBox.TabIndex = 11;
+            this.NewResSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewResSubmit.Location = new System.Drawing.Point(362, 408);
+            this.NewResSubmit.Name = "NewResSubmit";
+            this.NewResSubmit.Size = new System.Drawing.Size(98, 43);
+            this.NewResSubmit.TabIndex = 9;
+            this.NewResSubmit.Text = "Submit";
+            this.NewResSubmit.UseVisualStyleBackColor = true;
+            this.NewResSubmit.Click += new System.EventHandler(this.NewResSubmit_Click);
+            // 
+            // IDNumTextBox
+            // 
+            this.IDNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDNumTextBox.Location = new System.Drawing.Point(162, 251);
+            this.IDNumTextBox.Name = "IDNumTextBox";
+            this.IDNumTextBox.Size = new System.Drawing.Size(126, 26);
+            this.IDNumTextBox.TabIndex = 8;
+            // 
+            // IDNumLabel
+            // 
+            this.IDNumLabel.AutoSize = true;
+            this.IDNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDNumLabel.Location = new System.Drawing.Point(69, 252);
+            this.IDNumLabel.Name = "IDNumLabel";
+            this.IDNumLabel.Size = new System.Drawing.Size(86, 20);
+            this.IDNumLabel.TabIndex = 7;
+            this.IDNumLabel.Text = "ID Number";
+            // 
+            // RoomNumTextBox
+            // 
+            this.RoomNumTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNumTextBox.Location = new System.Drawing.Point(162, 194);
+            this.RoomNumTextBox.Name = "RoomNumTextBox";
+            this.RoomNumTextBox.Size = new System.Drawing.Size(126, 26);
+            this.RoomNumTextBox.TabIndex = 6;
+            // 
+            // RoomNumberLabel
+            // 
+            this.RoomNumberLabel.AutoSize = true;
+            this.RoomNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomNumberLabel.Location = new System.Drawing.Point(43, 195);
+            this.RoomNumberLabel.Name = "RoomNumberLabel";
+            this.RoomNumberLabel.Size = new System.Drawing.Size(112, 20);
+            this.RoomNumberLabel.TabIndex = 5;
+            this.RoomNumberLabel.Text = "Room Number";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Scholarship Recipient",
+            "Student Athlete",
+            "Student Worker"});
+            this.checkedListBox1.Location = new System.Drawing.Point(538, 88);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(188, 88);
+            this.checkedListBox1.TabIndex = 4;
+            // 
+            // LastNameTextBox
+            // 
+            this.LastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextBox.Location = new System.Drawing.Point(161, 130);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(127, 26);
+            this.LastNameTextBox.TabIndex = 3;
+            // 
+            // LastNameLabel
+            // 
+            this.LastNameLabel.AutoSize = true;
+            this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLabel.Location = new System.Drawing.Point(69, 136);
+            this.LastNameLabel.Name = "LastNameLabel";
+            this.LastNameLabel.Size = new System.Drawing.Size(86, 20);
+            this.LastNameLabel.TabIndex = 2;
+            this.LastNameLabel.Text = "Last Name";
+            // 
+            // FirstNameTextbox
+            // 
+            this.FirstNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextbox.Location = new System.Drawing.Point(161, 69);
+            this.FirstNameTextbox.Name = "FirstNameTextbox";
+            this.FirstNameTextbox.Size = new System.Drawing.Size(127, 26);
+            this.FirstNameTextbox.TabIndex = 1;
+            // 
+            // FirstNameLabel
+            // 
+            this.FirstNameLabel.AutoSize = true;
+            this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabel.Location = new System.Drawing.Point(69, 75);
+            this.FirstNameLabel.Name = "FirstNameLabel";
+            this.FirstNameLabel.Size = new System.Drawing.Size(86, 20);
+            this.FirstNameLabel.TabIndex = 0;
+            this.FirstNameLabel.Text = "First Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(299, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 4;
+            // 
+            // SearchSubmitButton
+            // 
+            this.SearchSubmitButton.Location = new System.Drawing.Point(360, 103);
+            this.SearchSubmitButton.Name = "SearchSubmitButton";
+            this.SearchSubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchSubmitButton.TabIndex = 5;
+            this.SearchSubmitButton.Text = "Submit";
+            this.SearchSubmitButton.UseVisualStyleBackColor = true;
+            this.SearchSubmitButton.Click += new System.EventHandler(this.SearchSubmitButton_Click);
             // 
             // Form2
             // 
@@ -747,9 +769,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.form2BindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.form2BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -834,5 +856,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imeModeDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox WorkingHoursTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SearchSubmitButton;
+        private System.Windows.Forms.Label label2;
     }
 }

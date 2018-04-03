@@ -13,7 +13,8 @@ namespace Project_3_New
 {
     public partial class Form2 : Form
     {
-        public BindingSource bindingSource1= new BindingSource();
+        BindingSource bindingSource1= new BindingSource();
+        List<Students> students = new List<Students>();
 
         public Form2()
         {
@@ -22,7 +23,7 @@ namespace Project_3_New
             String FilePath = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + @"\Students.csv";
             FileStream FileName = new FileStream(FilePath, FileMode.Open, FileAccess.ReadWrite);
             StreamReader Reader = new StreamReader(FileName);
-            List<Students> students = new List<Students>();
+            
             List<Students> BindingSourceList = new List<Students>();
             Students Astudent;
             string[] Values;
@@ -110,6 +111,26 @@ namespace Project_3_New
             Writer.WriteLine(Astudent.LName + "," + Astudent.FName + "," + Astudent.IDNum.ToString() + "," + Astudent.RoomNum.ToString()+ "," + Astudent.HoursWorked.ToString());
             Writer.Close();
             FileName.Close();
+        }
+
+        private void SearchSubmitButton_Click(object sender, EventArgs e)
+        {
+            
+            foreach (var i in students)
+            {
+                try
+                {
+                    if (Convert.ToInt16(StudentSearchTextBox.Text) == i.IDNum)
+                    {
+                        bindingSource1 = new BindingSource();
+                        bindingSource1.Add(i);
+                        dataGridView1.DataSource = bindingSource1;
+                    }
+                }
+                catch
+                {  }
+            }
+
         }
     }
 }

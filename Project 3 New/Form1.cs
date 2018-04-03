@@ -29,6 +29,14 @@ namespace Project_3_New
                 {
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("That Password was incorrect.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("That Username was not found.");
             }
             
         }

@@ -64,33 +64,40 @@ namespace Project_3_New
 
         private void NewResSubmit_Click(object sender, EventArgs e)
         {
-            List<Students> students = new List<Students>();
-            List<Students> BindingSourceList = new List<Students>();
-            Worker Bstudent;
-            Students Astudent;
-            if (checkedListBox1.GetItemChecked(0))
+            try
             {
-                Astudent = new Scholarship(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
-                Write(Astudent);
-                students.Add(Astudent);
+                List<Students> students = new List<Students>();
+                List<Students> BindingSourceList = new List<Students>();
+                Worker Bstudent;
+                Students Astudent;
+                if (checkedListBox1.GetItemChecked(0))
+                {
+                    Astudent = new Scholarship(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
+                    Write(Astudent);
+                    students.Add(Astudent);
+                }
+                if (checkedListBox1.GetItemChecked(1))
+                {
+                    Astudent = new Athlete(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
+                    Write(Astudent);
+                    students.Add(Astudent);
+                }
+                if (checkedListBox1.GetItemChecked(2))
+                {
+                    Bstudent = new Worker(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text), Convert.ToDouble(WorkingHoursTextBox.Text));
+                    Write1(Bstudent);
+                    students.Add(Bstudent);
+                }
+                Astudent = new Students(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
+
+                bindingSource1.Add(Astudent);
+
+                dataGridView1.DataSource = bindingSource1;
             }
-            if (checkedListBox1.GetItemChecked(1))
+            catch
             {
-                Astudent = new Athlete(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
-                Write(Astudent);
-                students.Add(Astudent);
+                MessageBox.Show("An error has occured please check your Entry boxes and try again.");
             }
-            if (checkedListBox1.GetItemChecked(2))
-            {
-                Bstudent = new Worker(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text),Convert.ToDouble(WorkingHoursTextBox.Text));
-                Write1(Bstudent);
-                students.Add(Bstudent);
-            }
-            Astudent = new Students(FirstNameTextbox.Text, LastNameTextBox.Text, Convert.ToInt16(RoomNumTextBox.Text), Convert.ToInt16(IDNumTextBox.Text));
-            
-            bindingSource1.Add(Astudent);
-            
-            dataGridView1.DataSource = bindingSource1;
         }
         private void Write(Students Astudent)
         {
